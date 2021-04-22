@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<head>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<style>
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+<a href="/">Home</a>
+<a href="/newbook">Add Book</a> 
+<a href="/updatebook">Update Book</a>
+<a href="/deletebook">Delete Book</a>
+
+<h2>List of Books</h2>
+
+<table id="customers">
+  <tr>
+    <th>#</th>
+    <th>Title</th>
+    <th>Author</th>
+    <th>Date</th>
+    <th>ISBN</th>
+    <th>Summary</th>
+  </tr>
+
+  <%for (let i=0; i<ar.length; i++) { %>
+  <tr>
+    <td> <%= (i+1)%>  </td>
+    <td> <%= ar[i].title%>  </td>
+    <td> <%= ar[i].author%>  </td>
+    <td> <%= ar[i].date%>  </td>
+    <td> <%= ar[i].isbn%>  </td>
+    <td> <%= ar[i].summary%>  </td>
+  </tr>
+  <%  }%>
+
+
+</table>
+
+</body>
+</html>

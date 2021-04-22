@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<head>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<style>
+
+
+* {
+  box-sizing: border-box;
+}
+
+/* Add padding to containers */
+.container {
+  padding: 16px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for the submit button */
+.registerbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity: 1;
+}
+
+/* Add a blue text color to links */
+a {
+  color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+
+<form action="/postnewbook" method="POST">
+  <div class="container">
+
+    <a href="/">Home</a> 
+    <a href="/listbooks">List Books</a>
+    <a href="/updatebook">Update Book</a>
+    <a href="/deletebook">Delete Book</a>
+
+    <h1>Add New Book</h1>
+
+    <hr>
+    <label for="email"><b>Title</b></label>
+    <input type="text" name="title" required>
+
+    <label for="psw"><b>Author</b></label>
+    <input type="text" name="author" required> <br><br><br>
+
+    <label for="psw-repeat"><b>ISBN</b></label>
+    <input type="text" name="ISBN" value=<%=num%> readonly>
+
+    <label for="date"><b>Date of Publication</b></label>
+    <input type="date" name="date" required> <br><br><br>
+
+    <label for="date"><b>Summary</b></label>
+    <input type="text" name="summary" required> <br><br><br>
+    <hr>
+
+    <button type="submit" class="registerbtn">Add New Book</button>
+  </div>
+  
+</form>
+
+</body>
+</html>
